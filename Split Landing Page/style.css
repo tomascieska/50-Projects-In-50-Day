@@ -6,8 +6,9 @@
 
 :root {
     --left-bg-color: rgb(87, 84, 263, 0.7);
-    --right-bg-color: rgb(43, 43, 43, 0.8)
-
+    --right-bg-color: rgb(43, 43, 43, 0.8);
+    --left-btn-hover-color: rgb(87, 84, 236, 1);
+    --right-btn-hover-color: rgb(28, 122, 28, 1);
 }
 
 body {
@@ -24,6 +25,35 @@ h1 {
     left: 50%;
     top: 20%;
     transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+}
+
+.split.left .btn:hover {
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
+}
+
+.split.right .btn:hover {
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
 }
 
 .container {
